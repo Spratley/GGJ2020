@@ -350,11 +350,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781876691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 1.402}
+  m_LocalPosition: {x: -1.54, y: 0.62, z: 1.402}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 827949929}
   - {fileID: 963194228}
+  - {fileID: 827949929}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -399,11 +399,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827949928}
   m_LocalRotation: {x: -0, y: -0.38515654, z: -0, w: -0.92285126}
-  m_LocalPosition: {x: -1.03, y: 0.58, z: 0}
+  m_LocalPosition: {x: -0.01999998, y: 0.09000003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 781876693}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 405.307, z: 0}
 --- !u!136 &827949930
 CapsuleCollider:
@@ -637,11 +637,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: 0.9966808, z: -0, w: 0.08140876}
-  m_LocalPosition: {x: -1.05, y: 1.29, z: -0.02}
+  m_LocalPosition: {x: 0.03, y: 0.69, z: -0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 781876693}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 170.66101, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -655,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7798a1a3175bb7e40b0f18379f5ae116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 2
+  mouseSensitivity: 100
   playerBody: {fileID: 781876693}
 --- !u!1 &1618046304
 GameObject:
