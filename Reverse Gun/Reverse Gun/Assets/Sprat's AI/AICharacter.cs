@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Linq;
 
-public class AICharacter : MonoBehaviour
+public class AICharacter : MonoBehaviour, IShootable
 {
     public float health;
     [Range(1, 100)]
     public float maxHealth;
-    
+
+    public bool startDead;
+
     public bool isDead
     {
         get
@@ -38,17 +41,25 @@ public class AICharacter : MonoBehaviour
 
         bodyBodies = gameObject.GetComponentsInChildren<Rigidbody>();
         SetKinematic(true);
+
+        if (startDead)
+            TakeDamage(maxHealth);
     }
 
     private void Update()
     {
-        TakeDamage(Time.deltaTime);
-
-        if (isDead && Input.GetKeyDown(KeyCode.E))
-            isDead = !isDead;
+        //TakeDamage(Time.deltaTime);
+        //
+        //if (isDead && Input.GetKeyDown(KeyCode.E))
+        //    isDead = !isDead;
     }
 
-    public virtual void TakeDamage(float amount)
+    public float GetHealth()
+    {
+        return health;
+    }
+
+    public void TakeDamage(float amount)
     {
         health = Mathf.Max(0, health - amount);
 
@@ -56,9 +67,12 @@ public class AICharacter : MonoBehaviour
             isDead = true;
     }
 
-    public virtual void HealDamage(float amount)
+    public void HealDamage(float amount)
     {
         health = Mathf.Min(maxHealth, health + amount);
+
+        if (health > 0 && isDead)
+            isDead = false;
     }
 
     protected virtual void Revive()
@@ -96,6 +110,13 @@ public class AICharacter : MonoBehaviour
     IEnumerator GetUp(float duration)
     {
         float percent = 0;
+
+        var posOffset = bodyBodies[0].transform.position - transform.position;
+        posOffset.y = 0;
+
+        transform.position += posOffset;
+        transform.GetChild(0).GetChild(0).position -= posOffset;
+
         Quaternion[] rotations = new Quaternion[bodyBodies.Length];
         Vector3 startPos = bodyBodies[0].transform.localPosition;
 
@@ -131,4 +152,5 @@ public class AICharacter : MonoBehaviour
         }
         
     }
+
 }
