@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Linq;
 
-public class AICharacter : MonoBehaviour
+public class AICharacter : MonoBehaviour, IShootable
 {
     public float health;
     [Range(1, 100)]
@@ -38,17 +39,19 @@ public class AICharacter : MonoBehaviour
 
         bodyBodies = gameObject.GetComponentsInChildren<Rigidbody>();
         SetKinematic(true);
+
+        Debug.Log(Transform.FindObjectsOfType<MonoBehaviour>().OfType<IShootable>());
     }
 
     private void Update()
     {
-        TakeDamage(Time.deltaTime);
-
-        if (isDead && Input.GetKeyDown(KeyCode.E))
-            isDead = !isDead;
+        //TakeDamage(Time.deltaTime);
+        //
+        //if (isDead && Input.GetKeyDown(KeyCode.E))
+        //    isDead = !isDead;
     }
 
-    public virtual void TakeDamage(float amount)
+    public void TakeDamage(float amount)
     {
         health = Mathf.Max(0, health - amount);
 
@@ -56,7 +59,7 @@ public class AICharacter : MonoBehaviour
             isDead = true;
     }
 
-    public virtual void HealDamage(float amount)
+    public void HealDamage(float amount)
     {
         health = Mathf.Min(maxHealth, health + amount);
     }
