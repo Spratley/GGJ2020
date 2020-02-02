@@ -8,6 +8,7 @@ public class Hitscan1 : MonoBehaviour
 {
     public Camera hitScanCam;
     public ParticleSystem bullet;
+    public ParticleSystem reversebullet;
     public GameObject gun; 
     public int ammo = 6;
     public Text ammoDisplay;
@@ -40,7 +41,7 @@ public class Hitscan1 : MonoBehaviour
             }
 
         }
-            bullet.Emit(hitScanCam.transform.position, hitScanCam.transform.forward*100.0f, 1.0f, 1.0f, Color.red);
+            bullet.Emit(gun.transform.position, hitScanCam.transform.forward*100.0f, 1.0f, 1.0f, Color.red);
             ammo--;
 
     }
@@ -52,7 +53,7 @@ public class Hitscan1 : MonoBehaviour
         if (Physics.Raycast(hitScanCam.transform.position, hitScanCam.transform.forward, out hit))
         {
 
-            bullet.Emit(hit.point, -hitScanCam.transform.forward * 100.0f, 1.0f, 1.0f, Color.red);
+            reversebullet.Emit(hit.point, (gun.transform.position - hit.point).normalized * 100.0f, 1.0f, 1.0f, Color.red);
             ammo++;
         }
     }
