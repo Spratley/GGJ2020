@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 471}
   m_MaxSize: {x: 14000, y: 14021}
   vertical: 0
-  controlID: 1239
+  controlID: 3157
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 471}
   m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 1240
+  controlID: 3117
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 1241
+  controlID: 3118
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -413,10 +413,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 176}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 72fbffff74fbffff803f000022400000
+      scrollPos: {x: 0, y: 690}
+      m_SelectedIDs: c2410000
+      m_LastClickedID: 16834
+      m_ExpandedIDs: 8eb0ffff92b0ffffeaf8ffffecf8ffff64420000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -476,9 +476,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.058136, y: 0.8073867, z: 26.438686}
+    m_Target: {x: 26.592966, y: -1.2758005, z: 39.64986}
     speed: 2
-    m_Value: {x: 3.058136, y: 0.8073867, z: 26.438686}
+    m_Value: {x: 26.592966, y: -1.2758005, z: 39.64986}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -524,13 +524,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.08269391, y: 0.12521358, z: -0.010289964, w: 0.9888043}
+    m_Target: {x: 0.10357298, y: -0.6284073, z: 0.08507666, w: 0.7664974}
     speed: 2
-    m_Value: {x: 0.082663655, y: 0.12667407, z: -0.010412138, w: 0.9884392}
+    m_Value: {x: -0.10357298, y: 0.62840724, z: -0.08507665, w: -0.7664973}
   m_Size:
-    m_Target: 2.0576441
+    m_Target: 12.3746195
     speed: 2
-    m_Value: -2.0576441
+    m_Value: 12.3746195
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -620,11 +620,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Sprat's AI/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Sprat's AI/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Noah Glassford\Documents\School\Local_Files\Repos\OtherRepos\GGJ2020\GGJ2020\Reverse
     Gun\Reverse Gun
@@ -632,9 +632,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 30350000
-    m_LastClickedID: 13616
-    m_ExpandedIDs: 00000000e432000000ca9a3b
+    m_SelectedIDs: 34370000
+    m_LastClickedID: 14132
+    m_ExpandedIDs: 00000000b8340000a837000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -662,7 +662,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e432000000ca9a3b
+    m_ExpandedIDs: 00000000b834000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
