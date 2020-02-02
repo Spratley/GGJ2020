@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hitscan : MonoBehaviour
 {
     public Camera hitScanCam;
     public ParticleSystem bullet;
     public int ammo = 6;
+    public Text ammoDisplay;
     // Update is called once per frame
     void Update()
     {
+        ammoDisplay.text = ammo.ToString();
         if(Input.GetButtonDown("Fire1") && ammo > 0)
         {
             Hit();
